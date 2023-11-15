@@ -124,10 +124,10 @@ void controlPeripheral(BLEDevice peripheral){
       
       Serial.print("Quaternion Data: ");
       quaternionCharacteristic.readValue(quaternionValues, sizeof(quaternionValues));
-      Serial.print("W: "); Serial.print(quaternionValues[0]);
-      Serial.print(" X: "); Serial.print(quaternionValues[1]);
-      Serial.print(" Y: "); Serial.print(quaternionValues[2]);
-      Serial.print(" Z: "); Serial.println(quaternionValues[3]);
+      Serial.print("X: "); Serial.print(quaternionValues[0]);
+      Serial.print(" Y: "); Serial.print(quaternionValues[1]);
+      Serial.print(" Z: "); Serial.print(quaternionValues[2]);
+      Serial.print(" W: "); Serial.println(quaternionValues[3]);
   }
 
 
