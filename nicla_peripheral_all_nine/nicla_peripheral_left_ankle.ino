@@ -5,15 +5,15 @@
 
   #define BLE_NICLA_UUID(val) ("19b10000-" val "-537e-4f6c-d104768a1214")
 
-  BLEService service(BLE_NICLA_UUID("0002"));
+  BLEService service(BLE_NICLA_UUID("0001"));
 
 
-  BLECharacteristic accelerometerCharacteristic(BLE_NICLA_UUID("5002"), BLERead | BLENotify, 3 * sizeof(float));  // Array of 3x 2 Bytes, XY
-  BLECharacteristic gyroscopeCharacteristic(BLE_NICLA_UUID("6002"), BLERead | BLENotify, 3 * sizeof(float));    // Array of 3x 2 Bytes, XYZ
-  BLECharacteristic quaternionCharacteristic(BLE_NICLA_UUID("7002"), BLERead | BLENotify, 4 * sizeof(float)); // Array of 4x 2 Bytes, XYZW
-  BLECharacteristic orientationCharacteristic(BLE_NICLA_UUID("9002"), BLERead | BLENotify, 3 * sizeof(float));   // Array of 3x 2 Bytes, roll, pitch, yaw
+  BLECharacteristic accelerometerCharacteristic(BLE_NICLA_UUID("5001"), BLERead | BLENotify, 3 * sizeof(float));  // Array of 3x 2 Bytes, XY
+  BLECharacteristic gyroscopeCharacteristic(BLE_NICLA_UUID("6001"), BLERead | BLENotify, 3 * sizeof(float));    // Array of 3x 2 Bytes, XYZ
+  BLECharacteristic quaternionCharacteristic(BLE_NICLA_UUID("7001"), BLERead | BLENotify, 4 * sizeof(float)); // Array of 4x 2 Bytes, XYZW
+  BLECharacteristic orientationCharacteristic(BLE_NICLA_UUID("9001"), BLERead | BLENotify, 3 * sizeof(float));   // Array of 3x 2 Bytes, roll, pitch, yaw
 
-  BLECharacteristic rgbLedCharacteristic(BLE_NICLA_UUID("8002"), BLERead | BLEWrite, 3 * sizeof(byte)); // Array of 3 bytes, RGB
+  BLECharacteristic rgbLedCharacteristic(BLE_NICLA_UUID("8001"), BLERead | BLEWrite, 3 * sizeof(byte)); // Array of 3 bytes, RGB
   // String to calculate the local and device name
   
 
@@ -22,7 +22,7 @@
   SensorQuaternion quaternion(SENSOR_ID_RV);
   SensorOrientation orientation(SENSOR_ID_ORI);
   
-  String name = "Nicla-L_Knee";
+  String name = "Nicla-L_Ankle";
 
   void setup(){
     Serial.begin(115200);
